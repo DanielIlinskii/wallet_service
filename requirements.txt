@@ -1,0 +1,11 @@
+# Основf
+fastapi
+uvicorn
+sqlalchemy
+alembic
+psycopg2-binary
+pydantic
+
+# Тесты
+pytest
+httpx
