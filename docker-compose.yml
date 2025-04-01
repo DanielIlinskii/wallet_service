@@ -11,6 +11,8 @@ services:
       - db
     environment:
       DATABASE_URL: postgresql+psycopg2://postgres:postgres@localhost:5432/postgres
+    networks:
+      - app_network
 
   db:
     image: postgres:13
@@ -25,3 +27,9 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
